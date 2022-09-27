@@ -15,7 +15,7 @@ const fd = [
     {
         title: "Demo Todo 2",
         description: "This is some more demo description. Blah blah blah",
-        "due": "2022-09-28",
+        "due": "2022-09-28", 
         priority: "1"
     },
 
