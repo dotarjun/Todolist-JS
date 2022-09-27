@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css"> -->
+    <title>Retrodolist</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1>Retrodolist</h1>
+            <h3>An 8 bit Retro Todo list</h3>
+        </nav>
+        <div class="site-content">
+            <div class="todo-bar">
+                <h3>Your Todos</h3>
+                <button class="dark-mode-toggle nes-btn">Dark Mode</button>
+            </div>
+            <main>
+                <div class="todo-grid">
+                    <form class="add-todo">
+                        <div class="todo-title">
+                            <!-- <h3>Title</h3> -->
+                            <div class="nes-field">
+                                <!-- <label for="title_field">Title</label> -->
+                                <input type="text" id="title_field" class="nes-input title" required placeholder="Title"
+                                    autofocus>
+                            </div>
+                            <button type="submit" class="nes-btn is-primary">Save</button>
+                        </div>
+                        <label for="textarea_field">Description</label>
+                        <textarea id="textarea_field" class="nes-textarea"></textarea>
+
+                        <div class="due-date-info">
+                            <label for="due-date">Due Date:</label>
+                            <input type="date" id="due-date">
+                        </div>
+                        <!-- <label for="priority"></label> -->
+                        <div class="nes-select">
+                            <select required id="priority">
+                                <option value="p1">Priority 1</option>
+                                <option value="p2">Priority 2</option>
+                                <option value="p3">Priority 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+</body>
+
+</html>
