@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --primary-clr: #108de0;
+
+  --dark-bg: #212529;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+}
+
+.container {
+  margin: 1rem;
+}
+
+nav {
+  background-color: var(--primary-clr);
+  position: sticky;
+  width: 100vw;
+  margin: 2rem;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  padding: 1rem;
+}
+
+.todo-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.dark-mode-toggle {
+  background-color: var(--dark-bg);
+  color: white;
+}
+
+.add-todo {
+  /* border: 2px solid black; */
+  padding: 1rem;
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb%2833,37,41%29" /></svg>');
+  border-image-slice: 2;
+  border-image-width: 2;
+  border-style: solid;
+  border-width: 4px;
+  border-image-outset: 2;
+  border-image-repeat: stretch;
+}
+
+.todo-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-todo .nes-btn {
+  margin-left: 2rem;
+}
+.due-date-info {
+  margin-block: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.due-date-info label {
+  margin: 0;
+}
