@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css"> -->
     <title>Retrodolist</title>
 </head>
 
 <body>
     <div class="container">
-        <nav>
+        <nav class="nes-container is-rounded">
             <h1>Retrodolist</h1>
             <h3>An 8 bit Retro Todo list</h3>
         </nav>
@@ -23,33 +22,49 @@
             <main>
                 <div class="todo-grid">
                 </div>
-                <form class="add-todo hidden">
 
-                    <div class="todo-title">
-                        <div class="nes-field">
-                            <input type="text" id="title_field" name="title" class="nes-input title" required
-                                placeholder="Title" autofocus>
-                        </div>
-                        <button type="submit" class="nes-btn is-primary">Save</button>
-                    </div>
+                <section>
+                    <button type="button" class="nes-btn is-primary" id="add-btn"
+                        onclick="document.getElementById('dialog-default').showModal();">
+                        &plus;
+                    </button>
+                    <dialog class="nes-dialog is-rounded" id="dialog-default">
+                        <h1>Add a new Todo</h1>
 
-                    <label for="textarea_field">Description</label>
-                    <textarea id="textarea_field" name="description" class="nes-textarea"></textarea>
+                        <form class="add-todo hidden">
+                            <div class="nes-field">
+                                <label for="title_field">Title</label>
+                                <input type="text" id="title_field" name="title" class="nes-input title" required
+                                    autofocus placeholder="Follow Arjun">
+                            </div>
 
-                    <div class="due-date-info">
-                        <label for="due-date">Due Date:</label>
-                        <input type="date" id="due-date" name="due">
-                    </div>
 
-                    <div class="nes-select">
-                        <select required id="priority" name="priority">
-                            <option value=1>Priority 1</option>
-                            <option value=2>Priority 2</option>
-                            <option value=3 selected>Priority 3</option>
-                        </select>
-                    </div>
+                            <label for="textarea_field">Description</label>
+                            <textarea id="textarea_field" placeholder="Follow @dotarjun on Twitter" name="description"
+                                class="nes-textarea"></textarea>
 
-                </form>
+                            <div class="due-date-info">
+                                <label for="due-date">Due Date:</label>
+                                <input type="date" id="due-date" name="due">
+                            </div>
+
+                            <div class="nes-select">
+                                <select required id="priority" name="priority">
+                                    <option value=1>Priority 1</option>
+                                    <option value=2>Priority 2</option>
+                                    <option value=3 selected>Priority 3</option>
+                                </select>
+                            </div>
+                            <menu class="dialog-menu">
+                                <button class="nes-btn is-primary save">Save</button>
+                                <button class="nes-btn cancel is-error">Quit</button>
+                            </menu>
+                        </form>
+                    </dialog>
+                </section>
+
+
+
             </main>
         </div>
     </div>

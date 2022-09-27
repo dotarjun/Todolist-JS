@@ -18,20 +18,29 @@ body {
   /* display: none; */
 }
 
+#add-btn {
+  width: 90%;
+  position: absolute;
+  bottom: 10px;
+}
 .site-content {
   margin: 1rem;
+  margin-top: 2rem;
 }
 
 nav {
   background-color: var(--primary-clr);
   position: sticky;
-  width: 100vw;
-  margin-bottom: 2rem;
   padding: 1rem;
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-inline-width: 8px !important;
+  border-bottom-width: 8px !important;
+  border-top-width: 0px !important;
+  margin-top: 0px !important;
+  margin-inline: 8px !important;
 }
 
 nav h1 {

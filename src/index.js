@@ -2,6 +2,9 @@ import "nes.css/css/nes.min.css";
 import './style.css';
 
 const form = document.querySelector('form');
+const modal = document.querySelector('dialog')
+const saveTodo = form.querySelector('.save')
+const cancelToDo = form.querySelector('.cancel')
 const fd = [
     {
         title: "Demo Todo",
@@ -18,12 +21,18 @@ const fd = [
 
 ];
 
-form.addEventListener('submit', (e) => {
+
+saveTodo.addEventListener('click', (e) => {
+    e.preventDefault();
     const data = Object.fromEntries(new URLSearchParams(new FormData(form).entries()));
     fd.push(data)
     addToDotoDOM()
-    e.preventDefault();
     console.log(data);
+})
+
+cancelToDo.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.close();
 })
 
 const addToDotoDOM = () => {
