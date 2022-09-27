@@ -12,8 +12,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            template: './src/index.html',
             title: 'Retrodolist',
-            favicon: './src/assets/images/favicon.ico'
+            favicon: './src/assets/images/favicon.ico',
         }),
     ],
     module: {
