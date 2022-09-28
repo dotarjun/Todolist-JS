@@ -18,15 +18,44 @@ body {
   /* display: none; */
 }
 
+#octocat {
+  position: absolute;
+  z-index: 3;
+  right: 10px;
+  top: -15px;
+  transform: scale(0.5);
+}
+
+.title-desc {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* height: 1.2rem; */
+}
+
+#trophy {
+  /* height: 100%; */
+  /* position: static; */
+  /* margin: 0; */
+  /* width: 1.5rem; */
+  /* height: 2rem; */
+  margin-right: 3rem;
+
+  /* transform: scale(2); */
+}
 #add-btn {
   width: 90%;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
 }
 .site-content {
   margin: 1rem;
   margin-top: 2rem;
 }
+
+/* .nes-mario {
+  width: 5px;
+} */
 
 nav {
   background-color: var(--primary-clr);
