@@ -9,10 +9,19 @@
 <link rel="icon" href="favicon.ico"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
 <body>
-    <i class="nes-octocat animate" id="octocat"></i>
+    <div class="drop-down">
+        <!-- <img src="./src/assets/images/dropdown.png" alt="" id="dropdown"> -->
+        <!-- <span>&#9776;<span> -->
+    </div>
     <div class="container">
         <nav class="nes-container is-rounded">
-            <h1>Retrodolist</h1>
+            <!-- <img class="nes-avatar is-medium is-rounded" alt="Hamburger Menu Button" src="./assets/images/dropdown.png"
+                    style="image-rendering: pixelated;"> -->
+            <div class="title">
+                <i class="nes-octocat animate hidden" id="octocat"></i>
+                <img alt="Retrodolist Icon" id="site-icon">
+                <h1>Retrodolist</h1>
+            </div>
             <div class="title-desc">
                 <!-- <i class="nes-icon trophy is-medium" id="trophy"></i> -->
                 <h3>An 8 bit Retro Todo list</h3>
@@ -35,7 +44,7 @@
                     <dialog class="nes-dialog is-rounded" id="dialog-default">
                         <h1>Add a new Todo</h1>
 
-                        <form class="add-todo hidden">
+                        <form class="add-todo">
                             <div class="nes-field">
                                 <label for="title_field">Title</label>
                                 <input type="text" id="title_field" name="title" class="nes-input title" required
