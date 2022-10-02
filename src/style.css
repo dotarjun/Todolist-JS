@@ -8,6 +8,7 @@
   /* --priority-clr-1: rgb(150, 24, 24); */
   --priority-clr-1: #ffd2d2;
   --priority-clr-2: #ffffd2;
+  --priority-clr-3: #f0f0f0;
 }
 
 html {
@@ -22,13 +23,31 @@ body {
 .hidden {
   /* display: none; */
 }
-
-#octocat {
+/* 
+.drop-down {
+  margin: 0;
   position: absolute;
   z-index: 3;
-  right: 10px;
-  top: -15px;
-  transform: scale(0.5);
+  right: 1.5rem;
+
+  display: flex;
+}
+
+.drop-down span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  
+} */
+
+#octocat {
+  transform: scale(1);
+  position: relative;
+  /* left: -1rem; */
+}
+
+.title {
+  display: flex;
+  align-items: center;
 }
 
 .title-desc {
@@ -68,7 +87,7 @@ body {
 nav {
   background-color: var(--primary-clr);
   position: sticky;
-  padding: 1rem;
+  padding: 1rem 0.5rem !important;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -142,8 +161,7 @@ nav h1 {
   border-width: 2px;
   border-image-outset: 2;
   border-image-repeat: stretch;
-  background-color: var(--priority-clr-2);
-
+  background-color: var(--priority-clr-3);
   padding: 0.5rem;
 }
 
@@ -156,7 +174,6 @@ nav h1 {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /* background-color: #c2c2c2; */
   margin-top: 1rem;
   flex-wrap: wrap;
 }

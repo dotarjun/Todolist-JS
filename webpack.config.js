@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin2');
 
 module.exports = {
     mode: 'development',
@@ -16,6 +17,11 @@ module.exports = {
             title: 'Retrodolist',
             favicon: './src/assets/images/favicon.ico',
         }),
+
+        new Visualizer({
+            filename: path.join('..', 'stats', 'statistics.html'),
+        }),
+
     ],
     module: {
         rules: [

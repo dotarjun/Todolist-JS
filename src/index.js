@@ -18,7 +18,6 @@ const fd = [
         "due": "2022-09-28",
         priority: "1"
     },
-
 ];
 
 
@@ -37,7 +36,6 @@ cancelToDo.addEventListener('click', (e) => {
 
 const addToDotoDOM = () => {
     const todoGrid = document.querySelector(".todo-grid")
-
     let child = todoGrid.lastElementChild;
     while (child) {
         todoGrid.removeChild(child);
@@ -57,20 +55,24 @@ const addToDotoDOM = () => {
         desc.textContent = ele.description
         priority.textContent = `Priority ${ele.priority}`
         due.textContent = dateConverter(ele);
+        // todoCardColor()
         info.appendChild(priority)
         info.appendChild(due)
         todoCard.appendChild(h2)
         todoCard.appendChild(desc)
         todoCard.appendChild(info)
         todoGrid.appendChild(todoCard)
-        console.log(fd);
     });
+    todoCardColor();
 }
 
 const dateConverter = (obj) => {
-    // "due": "2022-09-28",
+
     const date = obj.due;
-    //  date = 2002-09-28
+    console.log(date);
+    if (date == '') {
+        return date
+    }
     const dateArr = date.split('-')
     // date dateArr = [2022,09,28]
     const year = dateArr[0]
@@ -82,5 +84,46 @@ const dateConverter = (obj) => {
 
 console.log(dateConverter(fd[0]))
 
+const todoCardColor = () => {
+    const cards = document.querySelectorAll('.todo-card');
+    console.log('working');
+    cards.forEach((card) => {
+        const priorityArr = card.childNodes[2].childNodes[0].textContent.split('')
+        const priority = priorityArr[priorityArr.length - 1]
+        console.log(priority);
+        if (priority === '1') {
+            card.style.backgroundColor = 'var(--priority-clr-1)'
+            console.log('working2');
+        }
+        if (priority === '2') {
+            card.style.backgroundColor = 'var(--priority-clr-2)'
+            console.log('working2');
+        }
+        console.log('working2');
+    })
+}
+
+const hamburgerMenu = () => {
+
+}
+
+// const siteIcon = document.getElementById('site-icon');
+// siteIcon.style.src = "./assets/images/icon.png";
+
+
+
 
 addToDotoDOM();
+
+const audioSFX = (btn, sfx) => {
+    const button = document.getElementById(`${btn}`);
+    button.addEventListener('click', () => {
+        const sfxAudio = new Audio();
+        sfxAudio.src = `./assets/audio/${sfx}.mp3`
+        sfxAudio.play();
+    })
+    console.log('sound!!');
+}
+
+audioSFX('add-btn', 'game-start')
+
