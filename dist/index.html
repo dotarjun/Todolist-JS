@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <title>Retrodolist</title>
 <link rel="icon" href="favicon.ico"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
 <body>
-    <div class="drop-down">
-        <!-- <img src="./src/assets/images/dropdown.png" alt="" id="dropdown"> -->
-        <!-- <span>&#9776;<span> -->
-    </div>
+
     <div class="container">
+
         <nav class="nes-container is-rounded">
-            <!-- <img class="nes-avatar is-medium is-rounded" alt="Hamburger Menu Button" src="./assets/images/dropdown.png"
-                    style="image-rendering: pixelated;"> -->
+
             <div class="title">
-                <i class="nes-octocat animate hidden" id="octocat"></i>
-                <img alt="Retrodolist Icon" id="site-icon">
+                <!-- <img alt="Site Icon" src="./assets/images/icon.png" id="site-icon"> -->
                 <h1>Retrodolist</h1>
             </div>
+
+
             <div class="title-desc">
                 <!-- <i class="nes-icon trophy is-medium" id="trophy"></i> -->
-                <h3>An 8 bit Retro Todo list</h3>
+                <!-- <h3>An 8 bit Retro Todo list</h3> -->
             </div>
+
         </nav>
+
+
         <div class="site-content">
             <div class="todo-bar">
-                <h3>Your Todos</h3>
-                <button class="dark-mode-toggle nes-btn">Dark Mode</button>
+                <i class="nes-ash"></i>
+                <h3>Inbox</h3>
             </div>
             <main>
                 <div class="todo-grid">
                 </div>
 
                 <section>
-                    <button type="button" class="nes-btn is-primary" id="add-btn"
-                        onclick="document.getElementById('dialog-default').showModal();">
-                        &plus;
-                    </button>
+
                     <dialog class="nes-dialog is-rounded" id="dialog-default">
                         <h1>Add a new Todo</h1>
 
@@ -53,8 +52,7 @@
 
 
                             <label for="textarea_field">Description</label>
-                            <textarea id="textarea_field" placeholder="Follow @dotarjun on Twitter" name="description"
-                                class="nes-textarea"></textarea>
+                            <textarea id="textarea_field" name="description" class="nes-textarea"></textarea>
 
                             <div class="due-date-info">
                                 <label for="due-date">Due Date:</label>
@@ -68,6 +66,7 @@
                                     <option value=3 selected>Priority 3</option>
                                 </select>
                             </div>
+
                             <menu class="dialog-menu">
                                 <button class="nes-btn is-primary save" type="submit">Save</button>
                                 <button class="nes-btn cancel is-error">Quit</button>
@@ -80,6 +79,20 @@
 
             </main>
         </div>
+        <button type="button" class="nes-btn is-primary" id="add-btn"
+            onclick="document.getElementById('dialog-default').showModal();">
+            &plus;
+        </button>
+        <div class="bulba-help">
+            <section class="message -left">
+                <!-- Balloon -->
+                <div class="nes-balloon from-right">
+                    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here :)</a></p>
+                </div>
+            </section>
+            <i class="nes-bulbasaur"></i>
+        </div>
+
     </div>
     </div>
 </body>
