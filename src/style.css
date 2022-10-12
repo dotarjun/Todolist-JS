@@ -77,21 +77,17 @@ body {
 }
 .site-content {
   margin: 1rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
-
-/* .nes-mario {
-  width: 5px;
-} */
 
 nav {
   background-color: var(--primary-clr);
   position: sticky;
   padding: 1rem 0.5rem !important;
-  height: 20vh;
+  height: 7.5vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   border-inline-width: 8px !important;
   border-bottom-width: 8px !important;
   border-top-width: 0px !important;
@@ -101,18 +97,25 @@ nav {
 
 nav h1 {
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .todo-bar {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 2rem;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: flex-end; */
+  margin-bottom: 1rem;
+}
+.nes-ash {
+  width: 20px !important;
+  height: 5px;
+  scale: 0.5;
 }
 
 .todo-bar h3 {
   font-size: 1.5rem;
+  margin-left: 60px;
 }
 
 .dark-mode-toggle {
@@ -135,7 +138,7 @@ nav h1 {
 .todo-title {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 1rem;
 }
@@ -154,20 +157,27 @@ nav h1 {
 }
 
 .todo-card {
-  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb%2833,37,41%29" /></svg>');
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgba%2833,37,41,0.75%29" /></svg>');
   border-image-slice: 2;
   border-image-width: 2;
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
   border-image-outset: 2;
   border-image-repeat: stretch;
+  /* box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3); */
   background-color: var(--priority-clr-3);
   padding: 0.5rem;
+  /* border-radius: 5px; */
 }
 
-.todo-card p {
+.todo-card h2 {
+  font-size: 1rem;
+}
+
+.todo-card > p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
+  opacity: 70%;
 }
 
 .todo-card .info {
@@ -179,7 +189,7 @@ nav h1 {
 }
 
 .todo-card .info p {
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 
 .overdue {
@@ -194,6 +204,64 @@ nav h1 {
 
 .todo-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 5rem;
 }
+menu.dialog-menu {
+  display: flex;
+  justify-content: space-evenly;
+  padding-inline: 0;
+}
+menu.dialog-menu button {
+  margin-inline: 0 !important;
+}
+
+.bulba-help {
+  scale: 0.6;
+  position: absolute;
+  bottom: 30px;
+  right: -5px;
+}
+
+.bulba-help .nes-bulbasaur {
+  position: relative;
+  left: 220px;
+}
+
+/* Dark Mode */
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-clr: #084872;
+    --primary-clr: #0b6099;
+
+    --priority-clr-1: #99333373;
+    --priority-clr-2: #b5b340b7;
+    --priority-clr-3: #353535;
+  }
+
+  body {
+    background-color: var(--dark-bg);
+    color: #f0f0f0;
+  }
+  nav {
+    background-color: var(--primary-clr);
+  }
+  .dark-mode-toggle {
+    background-color: #f0f0f0 !important;
+    color: var(--dark-bg);
+  }
+  dialog {
+    background-color: var(--primary-clr);
+    color: #f0f0f0;
+  }
+  dialog .add-todo {
+    background-color: var(--dark-bg);
+  }
+  #add-btn {
+    background-color: var(--primary-clr);
+  }
+  .todo-card {
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgba%28222,218,214,0.1%29" /></svg>');
+  }
+} */
