@@ -3,11 +3,13 @@
 :root {
   --primary-clr: #108de0;
 
-  --dark-bg: #212529;
+  --dark-bg: rgb(33, 37, 41);
 
   /* --priority-clr-1: rgb(150, 24, 24); */
-  --priority-clr-1: #ffd2d2;
-  --priority-clr-2: #ffffd2;
+  /* --priority-clr-1: #e2323294; */
+  /* --priority-clr-2: #ffffd2; */
+  --priority-clr-1: #ce372b;
+  --priority-clr-2: #f2c409;
   --priority-clr-3: #f0f0f0;
 }
 
@@ -18,6 +20,7 @@ html {
 body {
   min-height: 100%;
   font-family: "Press Start 2P", cursive;
+  color: black;
 }
 
 .hidden {
@@ -67,6 +70,7 @@ body {
 
   /* transform: scale(2); */
 }
+
 #add-btn {
   width: calc(100% - 20px);
   margin: 0;
@@ -75,6 +79,7 @@ body {
   bottom: 10px;
   left: 10px;
 }
+
 .site-content {
   margin: 1rem;
   margin-top: 0rem;
@@ -152,16 +157,16 @@ nav h1 {
 }
 
 .todo-card {
-  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgba%2833,37,41,0.75%29" /></svg>');
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb%2833,37,41%29" /></svg>');
   border-image-slice: 2;
   border-image-width: 2;
   border-style: solid;
-  border-width: 3px;
+  border-width: 6px;
   border-image-outset: 2;
   border-image-repeat: stretch;
   /* box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3); */
   background-color: var(--priority-clr-3);
-  padding: 0.5rem;
+  padding: 1rem;
   /* border-radius: 5px; */
 }
 
@@ -185,13 +190,15 @@ nav h1 {
 
 .todo-card .info p {
   font-size: 0.6rem;
+  margin-bottom: 0;
 }
 
 .todo-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 5rem;
 }
+
 menu.dialog-menu {
   display: flex;
   justify-content: space-evenly;
@@ -215,20 +222,22 @@ menu.dialog-menu button {
 }
 
 /* Dark Mode */
-/* 
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-clr: #084872;
     --primary-clr: #0b6099;
 
-    --priority-clr-1: #99333373;
-    --priority-clr-2: #b5b340b7;
+    /* --priority-clr-1: #c92c2c; */
+    /* --priority-clr-2: #c7c422cc; */
+    --priority-clr-1: #ce372b;
+    --priority-clr-2: rgba(242, 195, 9, 0.7);
     --priority-clr-3: #353535;
   }
 
   body {
     background-color: var(--dark-bg);
-    color: #f0f0f0;
+    color: rgba(222, 218, 214);
+    /* 222,218,214 */
   }
   nav {
     background-color: var(--primary-clr);
@@ -238,7 +247,7 @@ menu.dialog-menu button {
     color: var(--dark-bg);
   }
   dialog {
-    background-color: var(--primary-clr);
+    /* background-color: var(--primary-clr); */
     color: #f0f0f0;
   }
   dialog .add-todo {
@@ -250,4 +259,4 @@ menu.dialog-menu button {
   .todo-card {
     border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgba%28222,218,214,0.1%29" /></svg>');
   }
-} */
+}
