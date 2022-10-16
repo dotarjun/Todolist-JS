@@ -7,25 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Retrodolist</title>
-<link rel="icon" href="favicon.ico"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+<link rel="icon" href="favicon.ico"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="todoMgmt.bundle.js"></script><script defer src="formData.bundle.js"></script><script defer src="dateConverter.bundle.js"></script><script defer src="color.bundle.js"></script><script defer src="audio.bundle.js"></script></head>
 
 <body>
 
     <div class="container">
 
         <nav class="nes-container is-rounded">
-
-            <div class="title">
-                <!-- <img alt="Site Icon" src="./assets/images/icon.png" id="site-icon"> -->
-                <h1>Retrodolist</h1>
-            </div>
-
-
-            <div class="title-desc">
-                <!-- <i class="nes-icon trophy is-medium" id="trophy"></i> -->
-                <!-- <h3>An 8 bit Retro Todo list</h3> -->
-            </div>
-
+            <h1 class="title">Retrodolist</h1>
+            <img src="./assets/images/menu.svg" alt="project menu" class="hamburger-menu">
         </nav>
 
 
@@ -39,15 +29,14 @@
                 </div>
 
                 <section>
-
                     <dialog class="nes-dialog is-rounded" id="dialog-default">
-                        <h1>Add a new Todo</h1>
+                        <h3>Add a new Todo</h3>
 
                         <form class="add-todo">
                             <div class="nes-field">
                                 <label for="title_field">Title</label>
                                 <input type="text" id="title_field" name="title" class="nes-input title" required
-                                    autofocus placeholder="Follow Arjun">
+                                    autofocus placeholder="New Todo">
                             </div>
 
 
@@ -69,7 +58,7 @@
 
                             <menu class="dialog-menu">
                                 <button class="nes-btn is-primary save" type="submit">Save</button>
-                                <button class="nes-btn cancel is-error">Quit</button>
+                                <button class="nes-btn cancel is-error">Exit</button>
                             </menu>
                         </form>
                     </dialog>
@@ -93,7 +82,6 @@
             <i class="nes-bulbasaur"></i>
         </div>
 
-    </div>
     </div>
 </body>
 
