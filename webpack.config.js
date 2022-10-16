@@ -6,6 +6,11 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
+        todoMgmt: './src/todoMgmt.js',
+        formData: './src/formData.js',
+        dateConverter: './src/dateConverter.js',
+        color: './src/color.js',
+        audio: './src/audio.js'
     },
     devtool: 'inline-source-map',
     devServer: {
